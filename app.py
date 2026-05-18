@@ -11,6 +11,7 @@ st.title("Fish Market Regression with Lasso Regularization")
 st.markdown(
     "This app loads the Fish Market dataset from a local file, trains a simple regression model, and shows Lasso regularization results from scratch."
 )
+# Force rebuild
 
 @st.cache_data
 def load_data():
