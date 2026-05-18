@@ -34,7 +34,7 @@ if st.checkbox("Show dataset statistics"):
     st.write(df.describe())
 
 # Dataset preprocessing
-x = df.drop(columns="Species", axis=1).drop(columns="Weight", axis=1).values
+x = df.drop(columns=["Species", "Weight"]).values
 # The original code uses `df.drop(columns="Weight",axis=1)` and `df["Weight"]`
 y = df["Weight"].values.reshape(-1, 1)
 
