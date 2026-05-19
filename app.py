@@ -19,12 +19,6 @@ def load_data():
     return pd.read_csv(DATA_FILE)
 
 df = load_data()
-if df is None:
-    st.error(
-        "Dataset not found. Please place `Fish.csv` inside a local `fish-market` folder inside this project."
-    )
-    st.write("Expected path:", DATA_FILE)
-    st.stop()
 
 st.subheader("Dataset Preview")
 st.write(df.head())
